@@ -6,10 +6,14 @@
 ## get the value of the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
+## define the function
   inv <- NULL
+## start/initialize a free variable 'inv'
   set <- function(y) {
     x <<- y
+## assign local value 'y' to 'x'
     inv <<- NULL
+## re-start/re-initialize free variable 'inv'
     }
 ## set the matrix
   get <- function() x
@@ -33,6 +37,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## inverse in the cache via the setinverse function.
 
 cacheSolve <- function(x, ...) {
+## define the function
   inv <- x$getinverse()
 ## Return a matrix that is the inverse of 'x'
   if(!is.null(inv)) {
